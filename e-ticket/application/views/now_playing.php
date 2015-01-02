@@ -12,10 +12,10 @@
 <li><a href="<?php echo site_url('coming_soon/');?>">coming soon</a></li>
 <li><a href="<?php echo site_url('contact_us/');?>">contact us</a></li>
 </ul>
-<?php foreach ($now_playing as $film) { ?>
-<a href="<?php echo site_url('now_playing/details/'.$film->id_film.'/');?>"><?php echo $film->judul; ?></a>
+<?php// foreach ($now_playing as $film) { ?>
+<a href="<?php //echo site_url('now_playing/details/'.$film->id_film.'/');?>"><?php// echo $film->judul; ?></a>
 <br>
-<?php } ?>
+<?php// } ?>
 </div>
 </body>
 </html>

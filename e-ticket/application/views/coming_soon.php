@@ -13,8 +13,8 @@
 <li><a href="<?php echo site_url('contact_us/');?>">contact us</a></li>
 </ul>
 
-<?php foreach ($coming_soon as $film) { ?>
-<?php echo $film->judul; ?>
+<?php// foreach ($coming_soon as $film) { ?>
+<?php// echo $film->judul; ?>
 <br>
 <?php } ?>
 

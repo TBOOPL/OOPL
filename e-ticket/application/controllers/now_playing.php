@@ -22,19 +22,19 @@ class now_playing extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('form');
-		$this->load->model('film');
+		//$this->load->model('film');
 	}
 
 	public function index()
 	{
-		$data['now_playing']=$this->film->select_now_playing()->result();
-		$this->load->view('now_playing',$data);
+		//$data['now_playing']=$this->film->select_now_playing()->result();
+		//$this->load->view('now_playing',$data);
 	}
 	
 	public function details($id)
 	{
-		$data['film']=$this->film->select_by_id($id)->result();
-		$this->load->view('detail_film',$data);
+		//$data['film']=$this->film->select_by_id($id)->result();
+		//$this->load->view('detail_film',$data);
 	}
 }
 

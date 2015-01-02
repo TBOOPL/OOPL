@@ -12,11 +12,11 @@
 <li><a href="<?php echo site_url('coming_soon/');?>">coming soon</a></li>
 <li><a href="<?php echo site_url('contact_us/');?>">contact us</a></li>
 </ul>
-<?php foreach($film as $i){} ?>
+<?php// foreach($film as $i){} ?>
 
 <a href="<?php echo site_url('home/');?>"> home </a>><a href="<?php echo site_url('now_playing/');?>"> now playing </a>>
-<a href="<?php echo site_url('now_playing/details/'.$i->id_film.'/');?>"> <?php echo $i->judul; ?></a> > buy ticket
-<h3><?php echo $i->judul;?> Ticket</h3>
+<a href="<?php// echo site_url('now_playing/details/'.$i->id_film.'/');?>"> <?php echo $i->judul; ?></a> > buy ticket
+<h3><?php// echo $i->judul;?> Ticket</h3>
 <table>
 
 <tr>
@@ -24,21 +24,21 @@
 <td>studio</td>
 <td>kursi tersedia</td>
 </tr>
-<?php foreach($tayang as $j){?>
+<?php// foreach($tayang as $j){?>
 <tr>
-<td><?php echo $j->waktu;?></td>
-<td><?php echo $j->nama_studio; ?></td>
+<td><?php// echo $j->waktu;?></td>
+<td><?php// echo $j->nama_studio; ?></td>
 <td>
-<select><?php  foreach($kursi as $k){
-if($k->id_tayang==$j->id_tayang){
+<select><?php//  foreach($kursi as $k){
+//if($k->id_tayang==$j->id_tayang){
 ?>
-  <option value="<?php echo $k->no_kursi; ?>"><?php echo $k->no_kursi; ?></option>
+  <option value="<?php //echo $k->no_kursi; ?>"><?php //echo $k->no_kursi; ?></option>
 <?php
-	}
-} ?>
+//	}
+//} ?>
 </select> </td>
 </tr>
-<?php } ?>
+<?php //} ?>
 </table>
 </div>
 </body>

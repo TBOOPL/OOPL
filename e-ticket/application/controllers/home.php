@@ -23,11 +23,43 @@ class Home extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+		///
+		$this->load->library('doctrine');
+        $this->em = $this->doctrine->em;
+		///
+		
 	}
 
 	public function index()
 	{
-		$this->load->view('home');
+		//insert to database
+		/*
+		$user = new Entity\User;
+		$user->setUsername('Joseph');
+		$user->setPassword('secretPassw0rd');
+		$user->setNama('yoga');
+		$user->setEmail('josephatwildlyinaccuratedotcom');
+		$this->em->persist($user);
+		$this->em->flush();
+		echo "wow";
+		*/
+		//findall
+		$userRepository=$this->em->getRepository('Entity\User');
+		$allUser=$userRepository->findAll();
+		foreach($allUser as $i)
+		{
+		echo $i->getUsername(). 'find all'.PHP_EOL;	
+		} 
+		
+		//findby
+		$userRepository=$this->em->getRepository('Entity\User');
+		$singleUser=$userRepository->findByUsername('Joseph');//findBy(array('username'=>'Joseph'));
+		foreach($singleUser as $i)
+		{
+		echo $i->getUsername().' find by'.PHP_EOL;	
+		} 
+		
+		//$this->load->view('home');
 	}
 }
 

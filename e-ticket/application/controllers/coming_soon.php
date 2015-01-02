@@ -22,13 +22,13 @@ class coming_soon extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('form');
-		$this->load->model('film');
+		//$this->load->model('film');
 	}
 	
 	public function index()
 	{
-		$data['coming_soon']=$this->film->select_coming_soon()->result();
-		$this->load->view('coming_soon',$data);
+		//$data['coming_soon']=$this->film->select_coming_soon()->result();
+		//$this->load->view('coming_soon',$data);
 	}
 	
 }

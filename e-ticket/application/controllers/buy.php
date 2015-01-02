@@ -22,21 +22,21 @@ class buy extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('form');
-		$this->load->model('film');
-		$this->load->model('pemesanan');
+		//$this->load->model('film');
+		//$this->load->model('pemesanan');
 	}
 
 	public function index()
 	{
-		$this->load->view('home');
+		//$this->load->view('home');
 	}
 	
 	function ticket($id)
 	{
-		$data['film']=$this->film->select_by_id($id)->result();
-		$data['tayang']=$this->pemesanan->select_now_tayang_by_id($id)->result();
-		$data['kursi']=$this->pemesanan->select_kursi_available($id)->result();
-		$this->load->view('buy',$data);
+		//$data['film']=$this->film->select_by_id($id)->result();
+		//$data['tayang']=$this->pemesanan->select_now_tayang_by_id($id)->result();
+		//$data['kursi']=$this->pemesanan->select_kursi_available($id)->result();
+		//$this->load->view('buy',$data);
 	}
 }
 
