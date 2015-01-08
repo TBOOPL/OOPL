@@ -32,8 +32,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		//insert to database
-		/*
+		//insert
 		$user = new Entity\User;
 		$user->setUsername('Joseph');
 		$user->setPassword('secretPassw0rd');
@@ -41,23 +40,71 @@ class Home extends CI_Controller {
 		$user->setEmail('josephatwildlyinaccuratedotcom');
 		$this->em->persist($user);
 		$this->em->flush();
-		echo "wow";
-		*/
-		//findall
+		echo "insert berhasil";
+		
+		//findall (return array)
 		$userRepository=$this->em->getRepository('Entity\User');
 		$allUser=$userRepository->findAll();
 		foreach($allUser as $i)
 		{
-		echo $i->getUsername(). 'find all'.PHP_EOL;	
+		echo $i->getUsername(). ' find all <br>';	
 		} 
 		
-		//findby
+		//findby (return array)
 		$userRepository=$this->em->getRepository('Entity\User');
 		$singleUser=$userRepository->findByUsername('Joseph');//findBy(array('username'=>'Joseph'));
 		foreach($singleUser as $i)
 		{
-		echo $i->getUsername().' find by'.PHP_EOL;	
+		echo $i->getUsername().' find by <br>';	
 		} 
+		
+		//find (return object)
+		$singleUser=$this->em->find('Entity\User','Joseph');//findBy(array('username'=>'Joseph'));
+		if(!empty($singleUser) && !is_null($singleUser)){
+			echo $singleUser->getUsername().' find <br>';	
+		}else
+		{
+			echo "tidak ada di database<br>";
+		}
+		
+		
+		//orderby 
+		$userRepository=$this->em->getRepository('Entity\User');
+		$singleUser=$userRepository->findBy(array(),array("nama"=>"DESC"));//findBy(array('username'=>'Joseph'));
+		foreach($singleUser as $i)
+		{
+		echo $i->getUsername().' ORDER by <br>';	
+		} 
+
+		//limit offset
+		$userRepository=$this->em->getRepository('Entity\User');
+		$singleUser=$userRepository->findBy(array(),array("nama"=>"DESC"),5,0);//findBy(array('username'=>'Joseph'));
+		foreach($singleUser as $i)
+		{
+		echo $i->getUsername().' limit offset <br>';	
+		} 		
+		
+		//update
+		$singleUser=$this->em->find('Entity\User','Joseph');
+		if(!empty($singleUser) && !is_null($singleUser)){
+			$singleUser->setUsername('hihihi');
+			$this->em->flush();
+			echo "updated <br>";
+		}else
+		{
+			echo "not updated";
+		}
+		
+		//delete
+		$singleUser=$this->em->find('Entity\User','hihihi');
+		if(!empty($singleUser) && !is_null($singleUser)){
+			$this->em->remove($singleUser);
+			$this->em->flush();
+			echo "deleted <br>";
+		}else
+		{
+			echo "not deleted";
+		}
 		
 		//$this->load->view('home');
 	}
