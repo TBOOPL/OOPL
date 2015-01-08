@@ -1,4 +1,4 @@
-tugas
+.::|| TUGAS ||::.
 -home [mira]
 -registrasi/login [gifaary]
 -now playing [irfan]

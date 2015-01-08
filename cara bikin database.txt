@@ -1,0 +1,12 @@
+.::|| CARA BIKIN DATABASE ||::. 
+-Jalanin xampp apache & mysql
+-Copy folder e-ticket ke htdocs
+-Tambahin environment variables
+ Cara:
+ * Buka My Computer -> klik kanan -> properties -> Advanced -> Environment Variables
+ * Di box System Variables Edit variable Path tambahin:
+   .....;C:\xampp\php\
+-Create database db_bioskop di mysql
+-Buka command prompt ketik--> cd C:/xampp/htdocs/e-ticket
+-Ketik php.exe application/doctrine.php orm:schema-tool:create
+-Tunggu sampai database selesai di create
