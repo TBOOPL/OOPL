@@ -51,7 +51,7 @@ class Film
 	/**
      * @Column(type="string", length=255, nullable=false)
      */
-    protected $thriller;
+    protected $trailer;
 	
 	/**
      * @OneToMany(targetEntity="having", mappedBy="id_film")
