@@ -58,36 +58,23 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="<?php echo base_url('assets/movies/'.$allMovies->getImg());?>" alt="First slide">
+	  <?php
+		$count=0;
+		foreach ($allMovies as $i){?>
+		<div class="item <?php if ($count==0) echo "active" ?>">
+          <img src="<?php echo base_url('assets/movies/'.$i->getImg());?>" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1><?php echo $allMovies->getTitle(); ?></h1>
-              <p><?php echo substr("".$allMovies->getDesc()."", 200); ?></p>
+              <h1><?php echo $i->getTitle(); ?></h1>
+              <p><?php echo substr("".$i->getDesc()."", 200); ?></p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Details</a></p>
             </div>
           </div>
         </div>
-        <div class="item">
-          <img src="<?php echo base_url('assets/movies/'.$allMovies1->getImg());?>" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1><?php echo $allMovies1->getTitle(); ?></h1>
-              <p><?php echo substr("".$allMovies1->getDesc()."", 200); ?></p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Details</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?php echo base_url('assets/movies/'.$allMovies2->getImg());?>" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1><?php echo $allMovies2->getTitle(); ?></h1>
-              <p><?php echo substr("".$allMovies2->getDesc()."", 200); ?></p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Details</a></p>
-            </div>
-          </div>
-        </div>
+	<?php
+		$count=1;
+		}
+	?>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
