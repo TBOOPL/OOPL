@@ -33,7 +33,7 @@ class Home extends CI_Controller {
 	public function showMovies(){
 		$movieRepository=$this->em->getRepository('Entity\Film');
 		$data['allMovies']= $movieRepository->findby(array(), array('id_film' => 'ASC'),3);
-		$this->load->view('home1',$data);
+		$this->load->view('home',$data);
 	}
 
 	public function index()
