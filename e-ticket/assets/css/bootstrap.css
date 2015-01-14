@@ -934,7 +934,7 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive,
+
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
@@ -943,6 +943,15 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/*EDITED*/
+.img-responsive{
+display: block;
+max-width: 95%;
+height: auto;
+}
+/*END*/
+
 .img-rounded {
   border-radius: 6px;
 }
