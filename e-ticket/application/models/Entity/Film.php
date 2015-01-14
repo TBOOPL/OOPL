@@ -57,4 +57,18 @@ class Film
      * @OneToMany(targetEntity="having", mappedBy="id_film")
      */
     protected $havings;
+
+    //methods:
+    public function getTitle()
+	{
+		return $this->title;
+	}
+	
+	public function getImg(){
+		return $this->image;
+	}
+	
+	public function getDesc(){
+		return $this->synopsis;
+	}
 }

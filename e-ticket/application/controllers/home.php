@@ -30,9 +30,20 @@ class Home extends CI_Controller {
 		
 	}
 
+	public function showMovies(){
+		//$movieRepository=$this->em->getRepository('Entity\Film');
+		$data['allMovies']=$this->em->find('Entity\Film',1);//$movieRepository->findall();
+		$data['allMovies1']=$this->em->find('Entity\Film',2);
+		$data['allMovies2']=$this->em->find('Entity\Film',3);
+		$this->load->view('home',$data);
+	}
+
 	public function index()
 	{
-		//insert
+		$this->showMovies();
+		
+		/*TUTORIAL*/
+		/*insert
 		$user = new Entity\User;
 		$user->setUsername('Joseph');
 		$user->setPassword('secretPassw0rd');
@@ -106,7 +117,8 @@ class Home extends CI_Controller {
 			echo "not deleted";
 		}
 		
-		//$this->load->view('home');
+		//$this->load->view('home');*/
+		/*END OF TUTORIAL*/
 	}
 }
 

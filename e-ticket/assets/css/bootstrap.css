@@ -4359,7 +4359,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 8px 50px 8px 100px;
+  margin-top: 50px;
   margin-bottom: 20px;
   list-style: none;
   background-color: #f5f5f5;
@@ -4873,6 +4874,12 @@ a.thumbnail.active {
   display: table-cell;
   vertical-align: top;
 }
+/*added*/
+.media-left img {
+   width: 320px;
+   height: 480px;
+}
+/*end*/
 .media-middle {
   vertical-align: middle;
 }
@@ -5818,8 +5825,10 @@ button.close {
 }
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: 80%;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 .carousel-inner > .item {
   position: relative;
@@ -6329,4 +6338,38 @@ button.close {
     display: none !important;
   }
 }
+
+/*Details*/
+#detail-wrapper{
+  padding: 20px 100px 0px 100px;
+  margin-bottom: 50px;
+}
+.detail-title {
+	font-size: 40px;
+	font-weight: normal;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.detail-buttons {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+.detail-buttons a {
+	margin-right: 20px;
+}
+
+#detail-body {
+	padding-left: 20px;
+}
+
+.detail-description {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
