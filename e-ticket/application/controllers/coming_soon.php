@@ -21,14 +21,23 @@ class coming_soon extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->helper('form');
-		//$this->load->model('film');
+		//$this->load->helper('form');
+		//$this->load->library('form_validation');
+		///
+		///
+		$this->load->library('doctrine');
+        $this->em = $this->doctrine->em;
+	}
+	
+	public function coming(){
+		$f = new Entity\Film;
+		$data['soon'] = $this->em->createQuery($f->getSoon())->getResult();
+		$this->load->view('coming_soon',$data);
 	}
 	
 	public function index()
 	{
-		//$data['coming_soon']=$this->film->select_coming_soon()->result();
-		//$this->load->view('coming_soon',$data);
+		$this->coming();
 	}
 	
 }

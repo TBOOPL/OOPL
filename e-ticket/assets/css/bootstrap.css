@@ -4630,8 +4630,7 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding: 30px 15px;
-  margin-bottom: 30px;
+  padding: 20px 15px;
   color: inherit;
   background-color: #eee;
 }
@@ -6380,5 +6379,4 @@ button.close {
 	font-size: 16px;
 	line-height: 1.5;
 }
-
 /*# sourceMappingURL=bootstrap.css.map */

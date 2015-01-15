@@ -10,7 +10,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class Film
 {
-
+	
     /**
 	 * @Id
      * @Column(type="integer", nullable=false)
@@ -54,6 +54,11 @@ class Film
     protected $trailer;
 	
 	/**
+     * @Column(type="string", length=255, nullable=false)
+     */
+    //protected $description;
+	
+	/**
      * @OneToMany(targetEntity="tayang", mappedBy="id_film")
      */
     protected $havings;
@@ -63,9 +68,9 @@ class Film
 		return $this->title;
 	}
 	
-	public function getImg()
+	public function getRating()
 	{
-		return $this->image;
+		return $this->rating;
 	}
 	
 	public function getId()
@@ -73,13 +78,19 @@ class Film
 		return $this->id_film;
 	}
 	
-	public function getDesc()
-	{
+	public function getImg(){
+		return $this->image;
+	}
+	
+	public function getDesc(){
 		return $this->synopsis;
 	}
 	
-	public function getSynopsis()
-	{
-		return $this->synopsis;
+	public function getPlaying(){
+		return "SELECT u FROM Entity\Film u WHERE u.start <= '".date('Y-m-d')."' and u.end >= '".date('Y-m-d')."'";
+	}
+	
+	public function getSoon(){
+		return "select u from Entity\Film u where u.start > '".date('Y-m-d')."'";
 	}
 }

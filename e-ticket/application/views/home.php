@@ -37,8 +37,8 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-				<li><a href="#coba">Now Playing</a></li>
-                <li><a href="#about">Coming Soon</a></li>
+				<li><a href="<?php echo site_url('Playing/')?>">Now Playing</a></li>
+                <li><a href="<?php echo site_url('coming_soon/')?>">Coming Soon</a></li>
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
             </div>
@@ -67,7 +67,7 @@
             <div class="carousel-caption">
               <h1><?php echo $i->getTitle(); ?></h1>
               <p><?php echo substr("".$i->getDesc()."", 200); ?></p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Details</a></p>
+              <p><a class="btn btn-lg btn-primary" href="<?php echo site_url('details/movieDetails/'.$i->getId()) ?>" role="button">Details</a></p>
             </div>
           </div>
         </div>

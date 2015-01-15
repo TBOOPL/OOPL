@@ -21,46 +21,39 @@ class Home extends CI_Controller {
 	 {
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->helper('form');
-		$this->load->library('form_validation');
+		//$this->load->helper('form');
+		//$this->load->library('form_validation');
+		///
 		///
 		$this->load->library('doctrine');
         $this->em = $this->doctrine->em;
-		///
 		
 	}
 
 	public function showMovies(){
 		$movieRepository=$this->em->getRepository('Entity\Film');
-		$data['allMovies']= $movieRepository->findby(array(), array('id_film' => 'ASC'),3);
+		$data['allMovies']= $movieRepository->findby(array(), array('start' => 'ASC', ),3);
 		$this->load->view('home',$data);
 	}
-
+	
 	public function index()
 	{
 		$this->showMovies();
-		
-		/*TUTORIAL*/
-		/*insert
-		$user = new Entity\User;
-		$user->setUsername('Joseph');
-		$user->setPassword('secretPassw0rd');
-		$user->setNama('yoga');
-		$user->setEmail('josephatwildlyinaccuratedotcom');
-		$this->em->persist($user);
-		$this->em->flush();
-		echo "insert berhasil";
+		//$this->showMovies();
+		//insert
+		//$movies = new entity\film;
+		//$user->setUsername('Joseph');
+		//$user->setPassword('secretPassw0rd');
+		//$user->setNama('yoga');
+		//$user->setEmail('josephatwildlyinaccuratedotcom');
+		//$this->em->persist($user);
+		//$this->em->flush();
+		//echo "insert berhasil";
 		
 		//findall (return array)
-		$userRepository=$this->em->getRepository('Entity\User');
-		$allUser=$userRepository->findAll();
-		foreach($allUser as $i)
-		{
-		echo $i->getUsername(). ' find all <br>';	
-		} 
-		
+				
 		//findby (return array)
-		$userRepository=$this->em->getRepository('Entity\User');
+		/*$userRepository=$this->em->getRepository('Entity\User');
 		$singleUser=$userRepository->findByUsername('Joseph');//findBy(array('username'=>'Joseph'));
 		foreach($singleUser as $i)
 		{
@@ -114,10 +107,10 @@ class Home extends CI_Controller {
 		{
 			echo "not deleted";
 		}
-		
-		//$this->load->view('home');*/
-		/*END OF TUTORIAL*/
+		*/
+		//$this->load->view('home');
 	}
+	
 }
 
 /* End of file welcome.php */
