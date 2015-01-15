@@ -1,0 +1,13 @@
+.::|| TUGAS ||::.
+-home [mira]
+-registrasi/login [gifaary]
+-now playing [irfan]
+-coming soon [irfan]
+-movie details [??]
+-order form [obos]
+
+.::||TIMELINE||::..
+
+Jumat(16-Jan-15) => Aplikasi
+Kamis(22-Jan-15) => Bahan Presentasi
+Senin(25-Jan-15) => 08.00 - 12.00 || 13.00 - 16.00 PRESENTASI

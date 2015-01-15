@@ -1,0 +1,7 @@
+.::Yang perlu dipersiapkan saat presentasi::.
+1. Deskripsi studi kasus(dokumentasi dsb)
+2. Framework (bahasan yang terkait dengan design pattern)
+3. Demo aplikasi
+4. Kendala & Lesson learned
+   Penanganan/Solusi
+5. Kesimpulan
