@@ -13,7 +13,7 @@ class User
 
     /**
 	 * @Id
-     * @Column(type="string", length=32, unique=true, nullable=false)
+     * @Column(type="string", length=32, nullable=false)
      */
     protected $username;
 
@@ -60,5 +60,10 @@ class User
 	public function getUsername()
 	{
 		return $this->username;
+	}
+	
+	public function getPassword()
+	{
+		return $this->password;
 	}
 }

@@ -28,7 +28,7 @@ class Studio
     protected $seats;
 	
 	/**
-     * @OneToMany(targetEntity="Having", mappedBy="nama_studio")
+     * @OneToMany(targetEntity="tayang", mappedBy="nama_studio")
      */
     protected $havings;
 }

@@ -35,8 +35,8 @@ class Transaction
     protected $id_seat;
 	
     /**
-	 * @ManyToOne(targetEntity="Having")
-     * @JoinColumn(name="id_having", referencedColumnName="id_having", nullable=false)
+	 * @ManyToOne(targetEntity="tayang")
+     * @JoinColumn(name="id_having", referencedColumnName="id_tayang", nullable=false)
      */
-    protected $id_having;
+    protected $id_tayang;
 }

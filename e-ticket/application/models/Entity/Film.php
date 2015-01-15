@@ -54,21 +54,32 @@ class Film
     protected $trailer;
 	
 	/**
-     * @OneToMany(targetEntity="having", mappedBy="id_film")
+     * @OneToMany(targetEntity="tayang", mappedBy="id_film")
      */
     protected $havings;
-
-    //methods:
-    public function getTitle()
+	
+	public function getTitle()
 	{
 		return $this->title;
 	}
 	
-	public function getImg(){
+	public function getImg()
+	{
 		return $this->image;
 	}
 	
-	public function getDesc(){
+	public function getId()
+	{
+		return $this->id_film;
+	}
+	
+	public function getDesc()
+	{
+		return $this->synopsis;
+	}
+	
+	public function getSynopsis()
+	{
 		return $this->synopsis;
 	}
 }

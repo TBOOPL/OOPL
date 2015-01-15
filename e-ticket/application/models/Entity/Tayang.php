@@ -6,9 +6,9 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @Entity
- * @Table(name="Having")
+ * @Table(name="Tayang")
  */
-class Having
+class Tayang
 {
 
     /**
@@ -16,7 +16,7 @@ class Having
      * @Column(type="integer", nullable=false)
      * @GeneratedValue(strategy="AUTO")
      */
-    protected $id_having;
+    protected $id_tayang;
 
     /**
      * @Column(type="datetime", nullable=false)
@@ -39,4 +39,9 @@ class Having
      * @OneToMany(targetEntity="Transaction", mappedBy="id_having")
      */
     protected $transactions;
+	
+	public function getSchedule()
+	{
+		return $this->schedule;
+	}
 }
