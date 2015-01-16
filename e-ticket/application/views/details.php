@@ -37,9 +37,12 @@
               <ul class="nav navbar-nav">
                 <li><a href="<?php echo site_url('home/');?>">Home</a></li>
 				<li><a href="<?php echo site_url('Playing/');?>">Now Playing</a></li>
-                <li><a href="#about">Coming Soon</a></li>
+                <li><a href="<?php echo site_url('coming_soon/')?>">Coming Soon</a></li>
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
+			  <ul class="nav navbar-nav navbar-right">
+					<li><a href="<?php echo site_url('login/')?>">Register/Login</a></li>
+			  </ul>
             </div>
           </div>
         </nav>
@@ -51,8 +54,8 @@
 	================================================== -->
 	
 	<ol id="breadcrumbs" class="breadcrumb">
-		<!--<li><a href="index.php">Home</a></li>
-		<li><a href="nowplaying.php">Now Playing</a></li>-->
+		<li><a href="index.php">Home</a></li>
+		<!--<li><a href="nowplaying.php">Now Playing</a></li>-->
 		<li class="active"><?php echo $detail->getTitle();?></li>
 	</ol>
 	

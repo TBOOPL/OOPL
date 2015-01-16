@@ -40,6 +40,9 @@
                 <li class="active"><a href="<?php echo site_url('coming_soon');?>">Coming Soon</a></li>
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
+			  <ul class="nav navbar-nav navbar-right">
+					<li><a href="<?php echo site_url('login/')?>">Register/Login</a></li>
+			  </ul>
             </div>
           </div>
         </nav>
@@ -83,8 +86,7 @@
 		if(($data % 3) == 0) echo '</div> <hr>';
 		$data=$data+1;
 		}
-		if(($data % 3) != 0) echo '</div> <hr>';?>	  
-	</div>
+		if(($data % 3) != 0) echo '</div>';?>	  
         <!-- /.row -->
 		
       <!-- FOOTER -->

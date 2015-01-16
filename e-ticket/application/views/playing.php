@@ -77,7 +77,6 @@
 		$data=$data+1;
 		}
 		if(($data % 3) != 0) echo '</div> <hr>';?>	  
-	</div>
         <!-- /.row -->
 		
       <!-- FOOTER -->
