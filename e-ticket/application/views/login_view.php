@@ -104,30 +104,57 @@
           </div>
 		</div>
 		
-		<div class="col-lg-1"></div>
 		
+		<div class="col-lg-1"></div>
+		<?php 
+          echo form_open("register/index");?>
 		<div class="col-lg-6 col-sm-6 well">
           <fieldset>
                <legend>Register</legend>
                <div class="form-group">
                <div class="row colbox">
                <div class="col-lg-3 col-sm-3">
-                    <label for="txt_username" class="control-label">Email</label>
+                    <label for="txt_username" class="control-label">Username</label>
                </div>
                <div class="col-lg-8 col-sm-8">
-                    <input class="form-control" id="txt_username" name="username" placeholder="Email" type="text" value="" />
+                    <input class="form-control" id="txt_username" name="register_username" placeholder="Username" type="text" value="<?php echo set_value('register_username'); ?>" onchange="cekUsername(this.value)" />
                     <span class="text-danger"></span>
+					<span class="notif" id="txtUsername"></span>
                </div>
                </div>
                </div>
                
+			   <div class="form-group">
+               <div class="row colbox">
+               <div class="col-lg-3 col-sm-3">
+                    <label for="txt_nama" class="control-label">Nama</label>
+               </div>
+               <div class="col-lg-8 col-sm-8">
+                    <input class="form-control" id="txt_nama" name="register_nama" placeholder="Nama" type="text" value="<?php echo set_value('register_nama'); ?>" />
+                    <span class="text-danger"></span>
+               </div>
+               </div>
+               </div>
+			   
+			   <div class="form-group">
+               <div class="row colbox">
+               <div class="col-lg-3 col-sm-3">
+                    <label for="txt_email" class="control-label">Email</label>
+               </div>
+               <div class="col-lg-8 col-sm-8">
+                    <input class="form-control" id="txt_email" name="email" placeholder="Email" type="text" value="<?php echo set_value('email'); ?>" />
+                    <span class="text-danger"></span>
+               </div>
+               </div>
+               </div>
+			   
                <div class="form-group">
                <div class="row colbox">
                <div class="col-lg-3 col-sm-3">
                <label for="txt_password" class="control-label">Password</label>
                </div>
                <div class="col-lg-8 col-sm-8">
-                    <input class="form-control" id="txt_password" name="password" placeholder="Password" type="password" value="" />
+                    <input class="form-control" id="txt_password" name="password" placeholder="Password" type="password" value="<?php echo set_value('password1'); ?>" />
                     <span class="text-danger"></span>
                </div>
                </div>
@@ -139,7 +166,7 @@
                <label for="txt_password" class="control-label">Confirm Password</label>
                </div>
                <div class="col-lg-8 col-sm-8">
-                    <input class="form-control" id="txt_password" name="confpassword" placeholder="Confirm Password" type="password" value="" />
+                    <input class="form-control" id="txt_password" name="confpassword" placeholder="Confirm Password" type="password" value="<?php echo set_value('password2'); ?>" />
                     <span class="text-danger"></span>
                </div>
                </div>
