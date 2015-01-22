@@ -42,27 +42,7 @@
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
-			  
-					<li>
-						<?php
-						//$this->session->userdata('logged_in');
-						
-						$logged_in=false;
-							if($this->session->userdata('logged_in')!=null){
-								$logged_in=$this->session->userdata('logged_in');
-							}
-							
-							if($logged_in){
-								echo '<font size="4" aligen="center">';
-								echo $this->session->userdata('username');
-								echo '</font>';
-							}else {?>
-								<a href="<?php echo site_url("login/")?>">
-									<?php echo 'Register/Login';
-								echo '</a>';
-							}
-						?>
-					</li>
+					<li><a href="<?php echo site_url('register/')?>">Register/Login</a></li>
 			  </ul>
 			</div>
             </div>
