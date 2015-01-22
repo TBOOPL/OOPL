@@ -1,7 +1,7 @@
 .::Yang perlu dipersiapkan saat presentasi::.
-1. Deskripsi studi kasus(dokumentasi dsb)
-2. Framework (bahasan yang terkait dengan design pattern)
-3. Demo aplikasi
-4. Kendala & Lesson learned
+1. Deskripsi studi kasus(dokumentasi dsb) --> mira
+2. Framework (bahasan yang terkait dengan design pattern) --> obos
+3. Demo aplikasi --> irfan
+4. Kendala & Lesson learned --> semua
    Penanganan/Solusi
-5. Kesimpulan
+5. Kesimpulan --> gifari
