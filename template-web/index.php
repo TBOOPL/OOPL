@@ -36,9 +36,9 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-				<li><a href="#coba">Now Playing</a></li>
-                <li><a href="#about">Coming Soon</a></li>
+				<li><a href="movies.php">Movies</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+				<li><a href="#login">Sign In | Login</a></li>
               </ul>
             </div>
           </div>
