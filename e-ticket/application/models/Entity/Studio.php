@@ -31,4 +31,9 @@ class Studio
      * @OneToMany(targetEntity="tayang", mappedBy="nama_studio")
      */
     protected $havings;
+	
+	public function getNamaStudio()
+	{
+		return $this->nama_studio;
+	}
 }

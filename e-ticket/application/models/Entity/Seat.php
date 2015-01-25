@@ -19,7 +19,7 @@ class Seat
     protected $id_seat;
 	
 	/**
-     * @Column(type="string", length=10, unique=true, nullable=false)
+     * @Column(type="string", length=10, nullable=false)
      */
     protected $no_kursi;
 
@@ -28,5 +28,13 @@ class Seat
      * @JoinColumn(name="nama_studio", referencedColumnName="nama_studio", nullable=false)
      */
     protected $nama_studio;
-
+	public function getId()
+	{
+		return $this->id_seat;
+	}
+	
+	public function getNoKursi()
+	{
+		return $this->no_kursi;
+	}
 }

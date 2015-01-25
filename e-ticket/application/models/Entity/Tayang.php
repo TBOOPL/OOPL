@@ -42,6 +42,31 @@ class Tayang
 	
 	public function getSchedule()
 	{
-		return $this->schedule;
+		return $this->schedule->format('Y-m-d H:i:s');
+	}
+	
+	public function getId()
+	{
+		return $this->id_tayang;
+	}
+	
+	public function getNamaStudio()
+	{
+		return $this->nama_studio->getNamaStudio();
+	}
+	
+	public function getFilm()
+	{
+		return $this->id_film->getTitle();
+	}
+	
+	public function getIdFilm()
+	{
+		return $this->id_film->getId();
+	}
+	
+	public function getTayangOrder($id){
+		$date = date('Y-m-d',strtotime(str_replace('-', '/', date('Y-m-d')) . "+3 days"));
+		return "SELECT u FROM Entity\Tayang u WHERE u.id_film =".$id." and '".date('Y-m-d')."' <= u.schedule and  u.schedule <= '".$date."'";
 	}
 }

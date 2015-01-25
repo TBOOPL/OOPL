@@ -39,4 +39,34 @@ class Transaction
      * @JoinColumn(name="id_having", referencedColumnName="id_tayang", nullable=false)
      */
     protected $id_tayang;
+		
+	public function setHarga()
+	{
+		$this->harga=35000;
+	}
+	
+	public function setUsername($user)
+	{
+		$this->username=$user;
+	}
+	
+	public function setSeat($s)
+	{
+		$this->id_seat=$s;
+	}
+	
+	public function setTayang($t)
+	{
+		$this->id_tayang=$t;
+	}
+	
+	public function getId()
+	{
+		return $this->id_pesan;
+	}
+	
+	public function getIdSeat()
+	{
+		return $this->id_seat->getId();
+	}
 }

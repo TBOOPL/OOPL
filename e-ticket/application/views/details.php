@@ -65,7 +65,7 @@
 		<div id="detail-container">
 			<div class="media">
 				<a class="media-left">
-					<img src="<?php echo base_url('assets/movies/'.$detail->getImg());?>" alt="imitation">
+					<img src="<?php echo base_url('assets/movies/'.$detail->getImg());?>" alt="<?php echo $detail->getTitle();?>">
 				</a>
 				<div id="detail-body" class="media-body">
 					<h1 class="media-heading"><?php echo $detail->getTitle();?></h1>
@@ -83,7 +83,7 @@
 						<?php echo $detail->getDesc();?>
 					</div>
 					<div class="detail-buttons">
-						<a class="btn btn-primary btn-lg" href="<?php echo site_url('buy/ticket/'.$detail->getId().'/');?>" role="button">Buy Ticket</a>
+						<a class="btn btn-primary btn-lg" href="<?php echo site_url('buy/ticket/'.$detail->getId().'/'.'ny');?>" role="button">Buy Ticket</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">Watch Trailer</a>
 						<a class="btn btn-primary btn-lg" href="#" role="button">View Schedule</a>
 					</div>

@@ -93,4 +93,7 @@ class Film
 	public function getSoon(){
 		return "select u from Entity\Film u where u.start > '".date('Y-m-d')."'";
 	}
+	public function getTtrailer(){
+		return $this->trailer;
+	}
 }

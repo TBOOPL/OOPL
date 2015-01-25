@@ -10,7 +10,6 @@
 
     <!-- Custom styles for this template -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/ticket.ico');?>"/>
-
 	</head>
 
 	<!-- NAVBAR
@@ -108,7 +107,7 @@
 		<div class="col-lg-1"></div>
 		<?php 
           echo form_open("register/index");?>
-		<div class="col-lg-6 col-sm-6 well">
+		  <div class="col-lg-6 col-sm-6 well">
           <fieldset>
                <legend>Register</legend>
                <div class="form-group">
@@ -117,7 +116,7 @@
                     <label for="txt_username" class="control-label">Username</label>
                </div>
                <div class="col-lg-8 col-sm-8">
-                    <input class="form-control" id="txt_username" name="register_username" placeholder="Username" type="text" value="<?php echo set_value('register_username'); ?>" onchange="cekUsername(this.value)" />
+                    <input class="form-control" id="txt_username" name="register_username" placeholder="Username" type="text" value="<?php echo set_value('register_username'); ?>" />
                     <span class="text-danger"></span>
 					<span class="notif" id="txtUsername"></span>
                </div>
@@ -127,6 +126,7 @@
 			   <div class="form-group">
                <div class="row colbox">
                <div class="col-lg-3 col-sm-3">
+					<?php echo form_error('register_nama', '<div style="color:red">','</div>');?>
                     <label for="txt_nama" class="control-label">Nama</label>
                </div>
                <div class="col-lg-8 col-sm-8">
@@ -139,6 +139,7 @@
 			   <div class="form-group">
                <div class="row colbox">
                <div class="col-lg-3 col-sm-3">
+			   <?php echo form_error('email', '<div style="color:red">','</div>');?>
                     <label for="txt_email" class="control-label">Email</label>
                </div>
                <div class="col-lg-8 col-sm-8">
@@ -154,7 +155,7 @@
                <label for="txt_password" class="control-label">Password</label>
                </div>
                <div class="col-lg-8 col-sm-8">
-                    <input class="form-control" id="txt_password" name="password" placeholder="Password" type="password" value="<?php echo set_value('password1'); ?>" />
+                    <input class="form-control" id="password" name="password1" placeholder="Password" type="password" value="<?php echo set_value('password1'); ?>" />
                     <span class="text-danger"></span>
                </div>
                </div>
@@ -163,10 +164,11 @@
 			   <div class="form-group">
                <div class="row colbox">
                <div class="col-lg-3 col-sm-3">
+			   <?php echo form_error('password2', '<div style="color:red">','</div>');?>
                <label for="txt_password" class="control-label">Confirm Password</label>
                </div>
                <div class="col-lg-8 col-sm-8">
-                    <input class="form-control" id="txt_password" name="confpassword" placeholder="Confirm Password" type="password" value="<?php echo set_value('password2'); ?>" />
+                    <input class="form-control" id="password2" name="password2" placeholder="Confirm Password" type="password" value="<?php echo set_value('password2'); ?>" />
                     <span class="text-danger"></span>
                </div>
                </div>
@@ -174,10 +176,11 @@
 			   
 			   <div class="form-group">
                <div class="col-lg-12 col-sm-12 text-center">
-                    <input id="btn_register" name="btn_register" type="submit" class="btn btn-default" value="Register" />
+                    <input id="btn_register" name="btn_register" type="submit" class="btn btn-default" value="Register"  />
                </div>
                </div>
           </fieldset>
+		 
           <?php echo form_close(); ?>
           <?php echo $this->session->flashdata('msg'); ?>
 		</div>
